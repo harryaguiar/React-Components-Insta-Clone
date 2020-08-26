@@ -10,7 +10,9 @@ console.log(posts);
   return (
     <div className='posts-container-wrapper'>
       {/* Map through the posts array returning a Post component at each iteration */ }
-     {posts.map(el => {return el.post})}
+     {posts.map((post, index) => {
+       return <Post key={index} post={post} likePost={likePost}/> 
+     })}
     
     
 
